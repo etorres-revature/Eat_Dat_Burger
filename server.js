@@ -1,6 +1,6 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const connection = require("./lib/assets/js");
+const connection = require("./lib/assets/config");
 
 const app = express();
 
