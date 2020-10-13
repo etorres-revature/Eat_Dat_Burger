@@ -1,0 +1,29 @@
+{
+  "name": "eat_dat_burger",
+  "version": "1.0.0",
+  "description": "Web app that utilizes html, css, bootstrap4, node.js, express, express-handlebars, and MySQL to create various burgers, save them, and in the end DEVOUR them.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/etorres-revature/Eat_Dat_Burger.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "handlebars",
+    "html",
+    "burger",
+    "css",
+    "bootstrap",
+    "MySQL"
+  ],
+  "author": "Eric D. Torres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/etorres-revature/Eat_Dat_Burger/issues"
+  },
+  "homepage": "https://github.com/etorres-revature/Eat_Dat_Burger#readme"
+}
