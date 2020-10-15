@@ -1,9 +1,7 @@
 const express = require("express");
 const { end } = require("../config/connection");
-const burger = require("../models.js/burger");
 const router = express.Router();
-
-
+const burger = require("../models/burger");
 
 router.get("/", (req, res) => {
   burger.read(data => {
