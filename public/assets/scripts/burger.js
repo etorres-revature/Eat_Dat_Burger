@@ -21,6 +21,7 @@ $(function () {
 
     const id = $(this).data("id");
     const newDevour = $(this).data("devourState");
+    console.log("this is newDevour", newDevour)
 
     const devouredState = {
       devoured: newDevour,
