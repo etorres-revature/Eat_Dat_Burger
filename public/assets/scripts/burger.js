@@ -20,8 +20,8 @@ $(function () {
     e.preventDefault();
 
     const id = $(this).data("id");
-    const newDevour = $(this).data("devourState");
-    const burgerName = $(this).data("burgerName");
+    const newDevour = $(this).data("devourstate");
+    const burgerName = $(this).data("burgername");
     const devouredState = {
       devoured: !newDevour,
     };
@@ -38,7 +38,7 @@ $(function () {
   $(".trashBurger").on("click", function (e) {
     e.preventDefault()
     const id = $(this).data("id");
-    const burgerName = $(this).data("burgerName");
+    const burgerName = $(this).data("burgername");
 
     $.ajax("/api/burgers/" + id, {
       type: "DELETE",
