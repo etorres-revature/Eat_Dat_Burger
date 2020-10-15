@@ -1,6 +1,5 @@
 const express = require("express");
 const exphbs = require("express-handlebars");
-const connection = require("./config/connection");
 const routes = require("./controllers/burger_controller");
 
 const app = express();

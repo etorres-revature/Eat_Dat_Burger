@@ -35,11 +35,11 @@ const orm = {
     });
   },
   // insertOne();
-  insertOne: (table, col, val, cb) => {
+  insertOne: (table, cols, vals, cb) => {
     let queryString = `INSERT INTO ${table}`;
 
     queryString += " (";
-    queryString += col.toString();
+    queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
     queryString += createMarks(vals.length);
@@ -73,22 +73,21 @@ const orm = {
       cb(result);
     });
   },
-};
+  //deleteOn();
+  deleteOne: (table, conditions, cb) => {
+    let queryString = `DELETE FROM ${table}`;
 
-//deleteOn();
-deleteOne: (table, condition, cb) => {
-  let queryString = `DELETE FROM ${table}`;
+    queryString += " WHERE ";
+    queryString += conditions;
 
-  queryString += " WHERE ";
-  queryString += condition;
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        return result.status(500).end();
+      }
 
-  connection.query(queryString, (err, result) => {
-    if (err) {
-      return result.status(500).end();
-    }
-
-    cb(result);
-  });
+      cb(result);
+    });
+  },
 };
 
 module.exports = orm;

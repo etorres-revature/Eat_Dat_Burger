@@ -6,18 +6,18 @@ const burger = {
       cb(result);
     });
   },
-  create: (col, val, cb) => {
-    orm.insertOne("deb_burgers", col, val, (result) => {
+  create: (cols, vals, cb) => {
+    orm.insertOne("dem_burgers", cols, vals, (result) => {
       cb(result);
     });
   },
-  update: (objColVals, condition, cb) => {
-    orm.updateOne("dem_burgers", objColVals, condition, (result) => {
+  update: (objColVals, conditions, cb) => {
+    orm.updateOne("dem_burgers", objColVals, conditions, (result) => {
       cb(result);
     });
   },
-  delete: (condition, cb) => {
-    orm.deleteOne("dem_burgers", condition, (result) => {
+  delete: (conditions, cb) => {
+    orm.deleteOne("dem_burgers", conditions, (result) => {
       cb(result);
     });
   },
