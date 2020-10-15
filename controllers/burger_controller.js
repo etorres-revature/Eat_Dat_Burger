@@ -1,14 +1,14 @@
 const express = require("express");
 const { end } = require("../config/connection");
-
+const burger = require("../models.js/burger");
 const router = express.Router();
 
-const burger = require("../models.js/burger");
+
 
 router.get("/", (req, res) => {
-  burger.all((data) => {
+  burger.read(data => {
     const burgersData = {
-      burgers: data,
+      burgers: data
     };
     console.log(burgersData);
     res.render("index", burgersData);
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-  burger.create(["burger_name", "devour"], [req.body.name, req.body.devour], (result) => {
+  burger.create(["burger_name", "devoured"], [req.body.burger, req.body.devour], (result) => {
     res.json({ id: result.insertID });
   });
 });
@@ -24,9 +24,11 @@ router.post("/api/burgers", (req, res) => {
 router.put("/api/burgers/:id", (req, res) => {
   const condition = `id = ${req.params.id}`;
 
-  burger.updte(
+  console.log("condition", condition)
+
+  burger.update(
     {
-      devour: req.body.devour,
+      devoured: req.body.devour,
     },
     condition,
     (result) => {
@@ -37,5 +39,17 @@ router.put("/api/burgers/:id", (req, res) => {
     }
   );
 });
+
+router.delete(condition, (req, res) =>{ 
+  const condition = `id = ${req.params.id}`;
+  console.log("condition", condition)
+
+  burger.delete(condition, result => {
+    if(result.changed === 0) {
+      return res.status(404).end();
+    }
+    res.status(200).end();
+  })
+})
 
 module.exports = router;

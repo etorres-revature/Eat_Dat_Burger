@@ -1,19 +1,24 @@
 const orm = require("../config/orm");
 
 const burger = {
-  all: (cb) => {
-    orm.all("dem_burgers", (result) => {
+  read: (cb) => {
+    orm.selectAll("dem_burgers", (result) => {
       cb(result);
     });
   },
   create: (col, val, cb) => {
-    orm.insertOne("dem_burgers", col, val, (result) => {
+    orm.insertOne("deb_burgers", col, val, (result) => {
       cb(result);
     });
   },
   update: (objColVals, condition, cb) => {
     orm.updateOne("dem_burgers", objColVals, condition, (result) => {
-      cb(resilt);
+      cb(result);
+    });
+  },
+  delete: (condition, cb) => {
+    orm.deleteOne("dem_burgers", condition, (result) => {
+      cb(result);
     });
   },
 };

@@ -1,9 +1,32 @@
 const connection = require("./connection");
 
-var orm = {
+function createMarks(num) {
+  let arr = [];
+
+  for (let i = 0; i < num; i++) {
+    arr.push("?");
+  }
+  return arr.toString();
+}
+
+function translateSql(obj) {
+  let arr = [];
+  for (let key in obj) {
+    let value = obj[key];
+    if (Object.hasOwnProperty.call(obj, key)) {
+      if (typeof value === "string" && value.indexOf(" ") >= 0) {
+        value = `${value}`;
+      }
+      arr.push(`${key}=${value}`);
+    }
+  }
+  return arr.toString();
+}
+
+const orm = {
   // selectAll();
-  all: (table, cb) => {
-    const queryString = `SELECT * FROM ${table}`;
+  selectAll: (table, cb) => {
+    const queryString = `SELECT * FROM ${table};`;
     connection.query(queryString, (err, result) => {
       if (err) {
         return result.status(500).end();
@@ -16,10 +39,10 @@ var orm = {
     let queryString = `INSERT INTO ${table}`;
 
     queryString += " (";
-    queryString += col;
+    queryString += col.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += val;
+    queryString += createMarks(vals.length);
     queryString += ") ";
 
     console.log(queryString);
@@ -31,12 +54,12 @@ var orm = {
       cb(result);
     });
   },
-
+  // updateOne();
   updateOne: (table, objColVals, conditions, cb) => {
     let queryString = `UPDATE ${table}`;
 
     queryString += " SET ";
-    queryString += objToSql(objColVals);
+    queryString += translateSql(objColVals);
     queryString += " WHERE ";
     queryString += conditions;
 
@@ -49,9 +72,23 @@ var orm = {
 
       cb(result);
     });
-  }
+  },
 };
 
-// updateOne();
+//deleteOn();
+deleteOne: (table, condition, cb) => {
+  let queryString = `DELETE FROM ${table}`;
+
+  queryString += " WHERE ";
+  queryString += condition;
+
+  connection.query(queryString, (err, result) => {
+    if (err) {
+      return result.status(500).end();
+    }
+
+    cb(result);
+  });
+};
 
 module.exports = orm;
