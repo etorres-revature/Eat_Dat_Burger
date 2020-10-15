@@ -1,10 +1,10 @@
 $(function () {
-  $(".crerate-form").on("submit", (e) => {
+  $(".create-form").on("submit", (e) => {
     e.preventDefault();
 
     const newBurger = {
       burger_name: $("#newBurger").val().trim(),
-      devoured: 0,
+      devoured: $("[name=devour]:checked").val().trim(),
     };
 
     $.ajax("/api/burgers", {
