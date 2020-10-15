@@ -21,29 +21,29 @@ $(function () {
 
     const id = $(this).data("id");
     const newDevour = $(this).data("devourState");
-    console.log("this is newDevour", newDevour)
-
+    const burgerName = $(this).data("burgerName");
     const devouredState = {
-      devoured: newDevour,
+      devoured: !newDevour,
     };
-    console.log("this is devoured state:", devouredState);
+    console.log("this is devoured state:", devouredState)
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: devouredState,
     }).then(() => {
-      console.log("User has devoured a burger");
+      console.log(`User has devoured ${burgerName}`);
       location.reload();
     });
   });
 
   $(".trashBurger").on("click", function (e) {
     e.preventDefault()
-    var id = $(this).data("id");
+    const id = $(this).data("id");
+    const burgerName = $(this).data("burgerName");
 
     $.ajax("/api/burgers/" + id, {
       type: "DELETE",
     }).then(() => {
-      console.log("User has trashed this burger");
+      console.log(`User has trashed ${burgerName}`);
       location.reload();
     });
   });
