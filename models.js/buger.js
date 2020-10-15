@@ -1,7 +1,21 @@
-// TODO
+const orm = require("../config/orm");
 
-// import ORM.js
+const burger = {
+  all: (cb) => {
+    orm.all("dem_burgers", (result) => {
+      cb(result);
+    });
+  },
+  create: (col, val, cb) => {
+    orm.insertOne("dem_burgers", col, val, (result) => {
+      cb(result);
+    });
+  },
+  update: (objColVals, condition, cb) => {
+    orm.updateOne("dem_burgers", objColVals, condition, (result) => {
+      cb(resilt);
+    });
+  },
+};
 
-//create code that will call ORM using burger specific input for ORM
-
-// module.exports
+module.exports = burger;
