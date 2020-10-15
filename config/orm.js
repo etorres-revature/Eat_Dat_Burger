@@ -15,11 +15,12 @@ function translateSql(obj) {
     let value = obj[key];
     if (Object.hasOwnProperty.call(obj, key)) {
       if (typeof value === "string" && value.indexOf(" ") >= 0) {
-        value = `${value}`;
+        value = `"${value}"`;
       }
       arr.push(`${key}=${value}`);
     }
   }
+  console.log(arr)
   return arr.toString();
 }
 
@@ -29,7 +30,7 @@ const orm = {
     const queryString = `SELECT * FROM ${table};`;
     connection.query(queryString, (err, result) => {
       if (err) {
-        return result.status(500).end();
+        throw err;
       }
       cb(result);
     });
@@ -67,7 +68,7 @@ const orm = {
 
     connection.query(queryString, (err, result) => {
       if (err) {
-        return result.status(500).end();
+        throw err;
       }
 
       cb(result);
@@ -82,7 +83,7 @@ const orm = {
 
     connection.query(queryString, (err, result) => {
       if (err) {
-        return result.status(500).end();
+        throw err;
       }
 
       cb(result);

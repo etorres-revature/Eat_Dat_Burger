@@ -16,14 +16,16 @@ $(function () {
     });
   });
 
-  $(".eatburger").on("click", function (e) {
+  $(".eatBurger").on("click", function (e) {
     e.preventDefault();
 
     const id = $(this).data("id");
-    const devouredState = {
-      devoured: 1,
-    };
+    const newDevour = $(this).data("devourState");
 
+    const devouredState = {
+      devoured: newDevour,
+    };
+    console.log("this is devoured state:", devouredState);
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: devouredState,
@@ -33,18 +35,15 @@ $(function () {
     });
   });
 
-$(".trashBurger").on("click", function(e) {
-    e.preventDefault();
+  $(".trashBurger").on("click", function (e) {
+    e.preventDefault()
+    var id = $(this).data("id");
 
-    const id = $(this).data("id");
-
-    $.ajax({
-        type: "DELETE",
-        url: "/api/burgers/"+id
+    $.ajax("/api/burgers/" + id, {
+      type: "DELETE",
     }).then(() => {
-        console.log("User has trashed this burger")
-        location.reload()
-    })
-})
-
+      console.log("User has trashed this burger");
+      location.reload();
+    });
+  });
 });
