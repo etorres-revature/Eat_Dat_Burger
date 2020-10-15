@@ -1,10 +1,41 @@
-//TODO
+const express = require("express");
+const { end } = require("../config/connection");
 
-//import:
-// express
-// burger.js
+const router = express.Router();
 
-//create router for app 
+const burger = require("../models.js/buger");
 
+router.get("/", (req, res) => {
+  burger.all((data) => {
+    const burgersData = {
+      burgers: data,
+    };
+    console.log(burgersData);
+    res.render("index", burgersData);
+  });
+});
 
-//module.exports
+router.post("/api/burgers", (req, res) => {
+  burger.create(["burger_name"], [req.body.name], (result) => {
+    res.json({ id: result.insertID });
+  });
+});
+
+router.put("/api/burgers/:id", (req, res) => {
+  const condition = `id = ${req.params.id}`;
+
+  burger.updte(
+    {
+      devour: req.body.devour,
+    },
+    condition,
+    (result) => {
+      if (result.changedRows === 0) {
+        return res.status(404).end();
+      }
+      res.status(200).end();
+    }
+  );
+});
+
+module.exports = router;
