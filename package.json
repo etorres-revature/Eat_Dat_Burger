@@ -4,6 +4,7 @@
   "description": "Web app that utilizes html, css, bootstrap4, node.js, express, express-handlebars, and MySQL to create various burgers, save them, and in the end DEVOUR them.",
   "main": "server.js",
   "scripts": {
+    "start": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
