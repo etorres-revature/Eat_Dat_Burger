@@ -3,7 +3,7 @@ const { end } = require("../config/connection");
 
 const router = express.Router();
 
-const burger = require("../models.js/buger");
+const burger = require("../models.js/burger");
 
 router.get("/", (req, res) => {
   burger.all((data) => {
@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-  burger.create(["burger_name"], [req.body.name], (result) => {
+  burger.create(["burger_name", "devour"], [req.body.name, req.body.devour], (result) => {
     res.json({ id: result.insertID });
   });
 });
