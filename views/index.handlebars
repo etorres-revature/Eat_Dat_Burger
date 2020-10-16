@@ -1,39 +1,52 @@
-<h1>BURGER TIME!!</h1>
-
-<h2>Burgers to eat</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-             {{> burgers/burger-block devoured=false}}
-         {{/unless}}
-    {{/each}}
-</ul>
-
-<h2>Devoured burgers</h2>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            {{> burgers/burger-block devoured=true}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a New Burger</h2>
-
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger">New Burger:  </label>
-        <input type="text" id="newBurger" name="burger" placeholder="type in burger here">
+<div class="row">
+    <div class="col-1 mb-5"></div>
+    <div class="col-4 mb-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Burgers to eat</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burgers/burger-block devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="devour">Devour:  </label> 
-        <input type="radio" name="devour" value="1">Devoured
-        <input type="radio" name="devour" value="0" checked> Ready to eat!
+    <div class="col-2 mb-5"></div>
 
-        <button type="submit">Add this burger!</button>
+    <div class="col-4 mb-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h2>Devoured burgers</h2>
+            </div>
+            <div class="card-body">
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burgers/burger-block devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+                <li>
+                    hamburger
+
+                    <button class="eatBurger btn btn-danger btn-large" data-id="1" data-devourstate="false"
+                        data-burgername="hamburger">
+                        Eat DAT Burgah!!
+                    </button>
+
+                    <button class="trashBurger btn btn-primary" data-id="1" data-burgername="hamburger">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </li>
+                </ul>
+            </div>
+        </div>
     </div>
-</form>
+    <div class="col-1 mb-5"></div>
+</div>

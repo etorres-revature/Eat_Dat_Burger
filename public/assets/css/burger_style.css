@@ -1,0 +1,72 @@
+body{
+    background-color: hotpink;
+}
+
+.jumbotron {
+    background-color: gold;
+}
+
+.jumbotron #burger {
+    max-height: 425px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-header{
+    background-color: slategray;
+}
+
+.btn-large {
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: .65;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    margin-right: 5px;
+}
+
+.fa-github {
+    background: #2c4762;
+    color: white;
+    margin-left: 5px;
+}
+
+#copyright {
+    text-align: center;
+    color: wheat;
+}
+
+#social-media-header {
+    color: wheat;
+}
+
+#social-media {
+    text-align: center;
+}
+
+#e_mail {
+    color: wheat;
+    text-align: center
+}

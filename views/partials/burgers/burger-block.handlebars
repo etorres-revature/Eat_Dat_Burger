@@ -1,9 +1,11 @@
 <li>
     {{burger_name}}
 
-    <button class="eatBurger" data-id="{{id}}" data-devourstate="{{devoured}}" data-burgername="{{burger_name}}">
-    {{#if devoured}}Cook Again{{else}}Eat DAT Burgah!!{{/if}}
+    <button class="eatBurger btn btn-danger btn-large" data-id="{{id}}" data-devourstate="{{devoured}}"
+        data-burgername="{{burger_name}}">
+        {{#if devoured}}Cook Again{{else}}Eat DAT Burgah!!{{/if}}
     </button>
 
-    <button class="trashBurger" data-id="{{this.id}}" data-burgername="{{burger_name}}">DELETE this burger</button>
+    <button class="trashBurger btn btn-primary" data-id="{{this.id}}" data-burgername="{{burger_name}}"><i
+            class="fas fa-trash-alt"></i></button>
 </li>

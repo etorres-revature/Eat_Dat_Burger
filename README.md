@@ -5,7 +5,9 @@
 
 ## Project Description
 
-Thsi project uses CRUD functions to create, display, update, and delete different burgers.  A user can enter a new burger and choose its state (ready to eat/devoured).  There are two lists: one for burgers ready to be eaten and another for deveoured burgers.  Users can move burgers back and forth between the lists.  Users can also delete burgers.  This app utilizes the following technologies:  HTML5, CSS, Bootstrap4, Handlebars, Javascript, NODE.js, Epress.js, and MySQL.
+This project uses CRUD functions to create, display, update, and delete different types of burgers.  A user can enter a new burger and choose its state ("ready to eat"/"devoured").  There are two lists: one for burgers ready to be eaten and another for devoured burgers.  Users can move burgers back and forth between the lists by choosing the respective button to "Cook Again" or "Eat DAT Burgah!!".  Users can also delete burgers.  
+
+This app utilizes the following technologies:  HTML5, CSS, Bootstrap4, Handlebars, Javascript, NODE.js, Epress.js, and MySQL.
 
 ## Table of Contents
 
@@ -23,7 +25,7 @@ Thsi project uses CRUD functions to create, display, update, and delete differen
 
 ## Installation Instructions
 
-You can clone this repository,and run it with the terminal command "node server".  Then visit the local host.  Oor [use the app as deployed to Heroku](https://hidden-garden-02467.herokuapp.com/).
+You can clone this repository,and run it with the terminal command "node server".  Then visit the local host.  Or, [use the app as deployed to Heroku](https://hidden-garden-02467.herokuapp.com/).
 
 ## Usage 
 
