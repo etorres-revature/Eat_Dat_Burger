@@ -31,6 +31,24 @@ You can clone this repository,and run it with the terminal command "node server"
 
 [Use this app on Heroku](https://hidden-garden-02467.herokuapp.com/].
 
+Here are four :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
+
+1. *BACK END* walk through database schema, server, connection, and orm files:
+
+[![EAT DAT BURGER back end code walk through](./public/assets/img/screenshots\eat-dat-burger-db-schema-server-orm.png)](https://drive.google.com/file/d/1tn8-BIgP1VH9SI8QEPJOmfDWc_XOeqNo/preview)
+
+2. *MIDDLE* walk through model, controller, and ajax JavaScript:
+
+[![EAT DAT BURGER middle code walk through](./public/assets/img/screenshots\eat-dat-burger-model-controller-scripts.png)](https://drive.google.com/file/d/1HZkjmQojUwQbB31dnqQ2uAkoX51p2cpL/preview)
+
+3. *FRONT END* walk through handlebars views, html, and local styling:
+
+[![EAT DAT BURGER front end code walk through](./public/assets/img/screenshots\eat-dat-burger-view.png)](https://drive.google.com/file/d/1vjLXP3k8mt0q5egwLaTeJBsJ6ZsZ178R/preview)
+
+2. *EAT DAT BURGER* deployed app walk through:
+
+[![EAT DAT BURGER deployed app walk through](./public/assets/img/screenshots\eat-dat-burger-home.png)](https://drive.google.com/file/d/1IH34tn-HhkOK5cEG9VKAKCxPDHjR6Meh/preview)
+
 ## Guidelines for Contributing
 
 If you would like to make a contribution, or have ideas for future features, please contact the repository owner at the e-mail listed below.
