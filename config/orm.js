@@ -25,6 +25,7 @@ function translateSql(obj) {
 }
 
 const orm = {
+  
   // selectAll();
   selectAll: (table, cb) => {
     const queryString = `SELECT * FROM ${table};`;
@@ -35,6 +36,7 @@ const orm = {
       cb(result);
     });
   },
+
   // insertOne();
   insertOne: (table, cols, vals, cb) => {
     let queryString = `INSERT INTO ${table}`;
@@ -55,6 +57,7 @@ const orm = {
       cb(result);
     });
   },
+
   // updateOne();
   updateOne: (table, objColVals, conditions, cb) => {
     let queryString = `UPDATE ${table}`;
