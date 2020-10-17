@@ -1,11 +1,17 @@
+{{!-- handlebars partial file to add into the index where the express functions are called --}}
+{{!-- creating an li to add into the ul --}}
 <li class="my-1">
+    {{!-- putting in the burger_name column from the burgers object --}}
     {{burger_name}}
 
+    {{!-- button to switch the devoured state between true and false and with bootstrap styling --}}
     <button class="eatBurger btn btn-danger btn-large" data-id="{{id}}" data-devourstate="{{devoured}}"
         data-burgername="{{burger_name}}">
+        {{!-- express conditional logic that if devoured is true the button should indicate "Cook Again" and if it is false it should indicate "Eat DAT Burgah!!" --}}
         {{#if devoured}}Cook Again{{else}}Eat DAT Burgah!!{{/if}}
     </button>
 
+    {{!-- second button that deletes burgers --}}
     <button class="trashBurger btn btn-primary" data-id="{{this.id}}" data-burgername="{{burger_name}}"><i
             class="fas fa-trash-alt"></i></button>
 </li>

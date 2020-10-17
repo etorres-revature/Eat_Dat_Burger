@@ -1,16 +1,22 @@
+{{!-- handlebars template to include in main body with three "{}"'s --}}
 <div class="row">
     <div class="col-1 mb-5"></div>
     <div class="col-4 mb-5">
+        {{!-- card to hold burgers that are "ready to eat" --}}
         <div class="card">
             <div class="card-header text-center">
                 <h2>Burgers to eat</h2>
             </div>
             <div class="card-body">
+                {{!-- ul to hold list of ready to eat burgers --}}
                 <ul>
+                    {{!-- handlebars loop function that takes in burgers object --}}
                     {{#each burgers}}
                     {{#unless devoured}}
+                    {{!-- express function to tell express to put the burger partial template if the devoured column is "false" --}}
                     {{> burgers/burger-block devoured=false}}
                     {{/unless}}
+                    {{!-- closing the handlebars function --}}
                     {{/each}}
                 </ul>
             </div>
@@ -21,15 +27,20 @@
 
     <div class="col-4 mb-5">
         <div class="card">
+            {{!-- card to hold burgers that need to "Cook again" --}}
             <div class="card-header text-center">
                 <h2>Devoured burgers</h2>
             </div>
             <div class="card-body">
+                {{!-- ul to hold list of burgers to cook again --}}
                 <ul>
+                    {{!-- handlebars loop function that takes in burgers object --}}
                     {{#each burgers}}
                     {{#if devoured}}
+                    {{!-- express function to tell express to put the burger partial template if the devoured column is "true" --}}
                     {{> burgers/burger-block devoured=true}}
                     {{/if}}
+                    {{!-- closing the handlebars function --}}
                     {{/each}}
                 </ul>
             </div>
