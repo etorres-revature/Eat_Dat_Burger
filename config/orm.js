@@ -48,7 +48,7 @@ const orm = {
       if (err) {
         throw err;
       }
-      //callback function to return to burger object
+      //callback function to return to burger controller
       cb(result);
     });
   },
@@ -74,7 +74,7 @@ const orm = {
       if (err) {
         throw err;
       }
-      //callback function to return to the burger object
+      //callback function to return to the burger controller
       cb(result);
     });
   },
@@ -99,7 +99,7 @@ const orm = {
         throw err;
       }
 
-      //callback function to return to the burger object
+      //callback function to return to the burger controller
       cb(result);
     });
   },
@@ -122,7 +122,7 @@ const orm = {
         throw err;
       }
 
-      //callback function to return to the burger object
+      //callback function to return to the burger controller
       cb(result);
     });
   },
