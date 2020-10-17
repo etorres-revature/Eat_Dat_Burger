@@ -1,12 +1,15 @@
 /* local styling applied to handlebar views */
+/* background color of body */
 body{
     background-color: hotpink;
 }
 
+/* background color of jumbotron */
 .jumbotron {
     background-color: gold;
 }
 
+/* styling for burger image in jumbotron */
 .jumbotron #burger {
     max-height: 425px;
     max-width: 350px;
@@ -14,23 +17,28 @@ body{
     margin-right: auto;
 }
 
+/* background color for card headers */
 .card-header{
     background-color: slategray;
 }
 
+/* changing the button color for "Eat DAT Burgah!!" /"Cook Again" buttons*/
 .btn-large {
     color: black;
 }
 
+/* removing the bullets from he ul element */
 ul {
     list-style-type: none;
 }
 
+/* using roboto and making the font relative to the largest font size on the page */
 li {
     font-family: "Roboto", sans-serif;
     font-size: 1.5rem;
 }
 
+/* footer styling */
 .fa {
     padding: 20px;
     font-size: 30px;
