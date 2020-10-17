@@ -92,7 +92,7 @@ const orm = {
     //logging the query string to the console
     console.log(queryString);
 
-    //calling the connection to MySQL to pass the query 
+    //calling the connection to MySQL to pass the query
     connection.query(queryString, (err, result) => {
       //error handling
       if (err) {

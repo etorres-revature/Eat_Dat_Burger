@@ -31,10 +31,10 @@ const burger = {
       cb(result);
     });
   },
-//function to delete a burger in the dem_burgers table of the eatDemBurgersDB
+  //function to delete a burger in the dem_burgers table of the eatDemBurgersDB
   delete: (conditions, cb) => {
     //calling the deleteOne() function from the ORM
-    //passing in 
+    //passing in
     orm.deleteOne("dem_burgers", conditions, (result) => {
       //returning the callback function to burger controller with results form model
       cb(result);

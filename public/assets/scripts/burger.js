@@ -5,9 +5,9 @@ $(function () {
     // since the button is in a form it needs a prevent default to keep it from submitting without proper instruction
     e.preventDefault();
 
-//creating an object that has the information to bring to the controller for the new burger entered by the user
+    //creating an object that has the information to bring to the controller for the new burger entered by the user
     const newBurger = {
-      //grabbing the value from the text input 
+      //grabbing the value from the text input
       burger_name: $("#newBurger").val().trim(),
       //grabbing the value from the radio buttons for devoured
       devoured: $("[name=devour]:checked").val().trim(),
@@ -45,7 +45,7 @@ $(function () {
       //setting the devoured state to the opposite of what it was when the button was clicked using "!"
       devoured: !newDevour,
     };
-  
+
     //using ajax to pass the information obtained from HTML to the controller
     $.ajax("/api/burgers/" + id, {
       //PUT method
@@ -64,7 +64,7 @@ $(function () {
   //creating an on click event for button that will delete a burger
   $(".trashBurger").on("click", function (e) {
     //no reason to prevent default since button is not in a form; did anyway for consistency
-    e.preventDefault()
+    e.preventDefault();
 
     //creating variables to use in the ajax call
     //pulling the ide using "this" keyword for context

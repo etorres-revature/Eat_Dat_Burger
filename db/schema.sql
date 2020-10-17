@@ -1,12 +1,9 @@
 -- dropping the eatDemBurgersDB if it already exists
 DROP DATABASE IF EXISTS eatDemBurgersDB;
-
 -- creating the the eatDemBurgersDB
 CREATE DATABASE eatDemBurgersDB;
-
 -- using the eatDemBurgersDB
 USE eatDemBurgersDB;
-
 -- creating a dem_burgres table to hold burgers
 CREATE TABLE dem_burgers (
     -- table schema for table
