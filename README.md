@@ -25,11 +25,13 @@ This app utilizes the following technologies:  HTML5, CSS, Bootstrap4, Handlebar
 
 ## Installation Instructions
 
-You can clone this repository,and run it with the terminal command "node server".  Then visit the local host.  Or, [use the app as deployed to Heroku](https://hidden-garden-02467.herokuapp.com/).
+You can clone this repository,and run it with the terminal command "node server".  Then visit the local host.  
+
+Or, [use the app as deployed to Heroku](https://hidden-garden-02467.herokuapp.com/).
 
 ## Usage 
 
-[Use this app on Heroku](https://hidden-garden-02467.herokuapp.com/].
+[Use this app on Heroku](https://hidden-garden-02467.herokuapp.com/).
 
 Here are four :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
 
