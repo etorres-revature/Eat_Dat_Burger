@@ -31,7 +31,7 @@ Or, [use the app as deployed to Heroku](https://hidden-garden-02467.herokuapp.co
 
 ## Usage 
 
-[Use this app on Heroku](https://hidden-garden-02467.herokuapp.com/).
+[Use Eat Dat Burger on Heroku](https://hidden-garden-02467.herokuapp.com/).
 
 Here are four :movie_camera: **VIDEOS** :movie_camera: that display how to use the application.
 
