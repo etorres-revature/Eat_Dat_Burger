@@ -15,7 +15,7 @@ $(function () {
 
     //using ajax to pass the information from HTML to the controller
     $.ajax("/api/burgers", {
-      //PORT method
+      //POST method
       type: "POST",
       //newBurger object with user entered information
       data: newBurger,

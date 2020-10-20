@@ -122,7 +122,7 @@ const orm = {
         throw err;
       }
 
-      //callback function to return to the burger controller
+      //callback function to return to the burger controller;
       cb(result);
     });
   },
