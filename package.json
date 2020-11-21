@@ -4,8 +4,10 @@
   "description": "Web app that utilizes html, css, bootstrap4, node.js, express, express-handlebars, and MySQL to create various burgers, save them, and in the end DEVOUR them.",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run webpack --watch",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "webpack": "webpack"
   },
   "repository": {
     "type": "git",
@@ -28,8 +30,14 @@
   },
   "homepage": "https://github.com/etorres-revature/Eat_Dat_Burger#readme",
   "dependencies": {
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-pwa-manifest": "^4.3.0",
+    "workbox": "0.0.0",
+    "workbox-webpack-plugin": "^5.1.4"
   }
 }
