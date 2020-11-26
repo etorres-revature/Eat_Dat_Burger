@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Web app that utilizes html, css, bootstrap4, node.js, express, express-handlebars, and MySQL to create various burgers, save them, and in the end DEVOUR them.",
   "main": "server.js",
+  "homepage": "https://hidden-garden-02467.herokuapp.com/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prestart": "npm run webpack --watch",
